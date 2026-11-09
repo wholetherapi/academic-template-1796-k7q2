@@ -1,0 +1,35 @@
+title: "Academic Pages Template"
+description: "A Jekyll template for academic personal websites"
+url: "https://example.org"
+baseurl: ""
+
+author:
+  name: "Template Author"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "Template biography placeholder. Replace with your own details."
+  email: "template@example.org"
+  github: "template-user"
+  scholar: "https://scholar.google.com/citations?user=placeholder"
+  twitter: "@template_user"
+
+markdown: kramdown
+permalink: /:categories/:title/
+
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+  - scope:
+      path: "_pages"
+    values:
+      layout: single
+
+include:
+  - _pages
